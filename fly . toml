@@ -1,0 +1,11 @@
+[build]
+       builder = "paketobuildpacks/builder:base"
+       buildpacks = ["gcr.io/paketo-buildpacks/python"]
+
+     [build.args]
+       BP_CPYTHON_VERSION = "3.9.*"
+     
+     [http_service]
+       internal_port = 8080
+       force_https = true
+       auto_stop_machines = false
